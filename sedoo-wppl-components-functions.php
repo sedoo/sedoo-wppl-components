@@ -13,3 +13,13 @@ function sedoo_blocks_components_render_callback( $block ) {
 		include $templateURL;
     }
 }
+
+function set_sso_var_login() {
+	setcookie("wordpress_aeris_sso_login_status", 1);
+}
+add_action('wp_login', 'set_sso_var_login');
+
+function set_sso_var_logout() {
+	setcookie("wordpress_aeris_sso_login_status", 0);
+}
+add_action('wp_logout', 'set_sso_var_logout');
