@@ -93,7 +93,7 @@ acf_add_local_field_group(array(
                 'label' => 'Element vue JS',
                 'name' => 'element_vue_js',
                 'type' => 'relationship',
-                'instructions' => '',
+                'instructions' => 'One component per block !',
                 'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
