@@ -49,7 +49,7 @@ function sedoo_custompost_vuejselements() {
 		'label'                 => __( 'VueJS', 'text_domain' ),
 		'description'           => __( 'Elements VUEJS', 'text_domain' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title'),
+		'supports'              => array( 'title','author','revisions'),
 		'taxonomies'            => array( 'category', 'post_tag' ),
 		'hierarchical'          => false,
 		'public'                => true,
