@@ -110,7 +110,7 @@ acf_add_local_field_group(array(
                 ),
                 'elements' => '',
                 'min' => '',
-                'max' => '',
+                'max' => '1',
                 'return_format' => 'object',
             ),
         ),
