@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sedoo - VUE JS Components
  * Description: Permet l'affichage de block vue js par les blocs gutenberg
- * Version: 0.1.2
+ * Version: 0.1.4
  * Author: Nicolas Gruwe 
  * GitHub Plugin URI: sedoo/sedoo-wppl-components
  * GitHub Branch:     master
@@ -17,7 +17,7 @@ include 'inc/sedoo-wppl-components-acf-fields.php';
 function sedoo_custompost_vuejselements() {
 
 	$labels = array(
-		'name'                  => _x( 'vuejss', 'Post Type General Name', 'text_domain' ),
+		'name'                  => _x( 'Composants WEB', 'Post Type General Name', 'text_domain' ),
 		'singular_name'         => _x( 'VueJS', 'Post Type Singular Name', 'text_domain' ),
 		'menu_name'             => __( 'Composant WEB', 'text_domain' ),
 		'name_admin_bar'        => __( 'Composant WEB', 'text_domain' ),
