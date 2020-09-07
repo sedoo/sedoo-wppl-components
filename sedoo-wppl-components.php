@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sedoo - VUE JS Components
  * Description: Permet l'affichage de block vue js par les blocs gutenberg
- * Version: 0.1.5
+ * Version: 0.2.0
  * Author: Nicolas Gruwe 
  * GitHub Plugin URI: sedoo/sedoo-wppl-components
  * GitHub Branch:     master
@@ -72,12 +72,13 @@ add_action( 'init', 'sedoo_custompost_vuejselements', 0 );
 
 /**
  * Enable unfiltered_html capability for Editors.
- *
+ * source : https://gist.github.com/kellenmace/9e6a6fbb92ec75940f23d2a6f01c9b59#gistcomment-3270716
+ * Not compatible with wp 5, See comment by innocenat
  */
-function km_add_unfiltered_html_capability_to_editors( $caps, $cap, $user_id ) {
-	if ( 'unfiltered_html' === $cap && user_can( $user_id, 'editor' ) ) {
+function sedoo_add_unfiltered_html_capability_to_editors( $caps, $cap, $user_id ) {
+	if ( 'unfiltered_html' === $cap && (user_can( $user_id, 'editor' ) || user_can( $user_id, 'administrator' ) ) ) {
 	$caps = array( 'unfiltered_html' );
 	}
 	return $caps;
 }
-add_filter( 'map_meta_cap', 'km_add_unfiltered_html_capability_to_editors', 1, 3 );
+add_filter( 'map_meta_cap', 'sedoo_add_unfiltered_html_capability_to_editors', 1, 4 );
