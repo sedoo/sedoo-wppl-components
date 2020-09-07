@@ -17,15 +17,17 @@ if( !empty($block['align']) ) {
 $blockvuejs = get_field('element_vue_js');
 $IdElementVueJS = $blockvuejs[0];
 
+
+?>
+<section class="sedoo-component <?php echo $className;?>">
+<?php
+echo get_field('contenu_du_block', $IdElementVueJS);
+// load script after content block
 if( have_rows('elements_inclus', $IdElementVueJS) ):
     while( have_rows('elements_inclus', $IdElementVueJS) ): the_row(); 
         echo the_sub_field('script');
     endwhile; 
 endif;
-?>
-<section class="sedoo-component <?php echo $className;?>">
-<?php
-echo get_field('contenu_du_block', $IdElementVueJS);
 ?>
 </section>
 
