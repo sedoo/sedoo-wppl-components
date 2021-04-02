@@ -15,7 +15,8 @@ if( !empty($block['align']) ) {
 }
 
 $blockvuejs = get_field('element_vue_js');
-$IdElementVueJS = $blockvuejs[0];
+$IdElementVueJS = $blockvuejs[0]->ID;
+
 
 
 ?>
@@ -29,8 +30,6 @@ $current_lang = substr( get_bloginfo ( 'language' ), 0, 2 );
 if ( function_exists('pll_the_languages') ) {
     $current_lang = pll_current_language();
 }
-
-
 echo str_replace('$$LANGUAGE$$', $current_lang, $campaign_replaced);
 
 // load script after content block
