@@ -1,6 +1,7 @@
 <?php 
 if( function_exists('acf_add_local_field_group') ):
 
+// POST TYPE FIELDS
 acf_add_local_field_group(array(
 	'key' => 'group_5e663e0f3f0c1',
 	'title' => 'Block VUE JS',
@@ -84,6 +85,7 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+// BLOCK FIELDS
     acf_add_local_field_group(array(
         'key' => 'group_5e663f5669abd',
         'title' => 'Gutenberg vue js',

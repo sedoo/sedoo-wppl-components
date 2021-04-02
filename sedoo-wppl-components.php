@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Sedoo - VUE JS Components
  * Description: Permet l'affichage de block vue js par les blocs gutenberg
- * Version: 0.2.5
+ * Version: 0.2.7
  * Author: Nicolas Gruwe 
  * GitHub Plugin URI: sedoo/sedoo-wppl-components
  * GitHub Branch:     master

@@ -18,14 +18,14 @@ $blockvuejs = get_field('element_vue_js');
 $IdElementVueJS = $blockvuejs[0]->ID;
 
 
-
 ?>
 <section class="sedoo-component <?php echo $className;?>">
 <?php
 
+
 $nom_campagne = get_field('nom_de_la_campagne', 'option');
-$campaign_replaced = str_replace('$$CAMPAIGNNAME$$', $nom_campagne, get_sub_field('contenu_du_block', $IdElementVueJS));
-            
+$campaign_replaced = str_replace('$$CAMPAIGNNAME$$', $nom_campagne, get_field('contenu_du_block', $IdElementVueJS));
+
 $current_lang = substr( get_bloginfo ( 'language' ), 0, 2 );
 if ( function_exists('pll_the_languages') ) {
     $current_lang = pll_current_language();
