@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Sedoo - VUE JS Components
  * Description: Permet l'affichage de block vue js par les blocs gutenberg
- * Version: 0.2.7
- * Author: Nicolas Gruwe 
+ * Version: 1.0.0
+ * Author: Pierre Vert, Nicolas Gruwe - SEDOO DATA CENTER
  * GitHub Plugin URI: sedoo/sedoo-wppl-components
  * GitHub Branch:     master
  */
@@ -14,7 +14,7 @@ include 'sedoo-wppl-components-acf.php';
 include 'inc/sedoo-wppl-components-acf-fields.php';
 
 // Register Custom Post Type
-function sedoo_custompost_vuejselements() {
+function sedoo_components_vuejselements() {
 
 	$labels = array(
 		'name'                  => _x( 'Composants WEB', 'Post Type General Name', 'text_domain' ),
@@ -67,7 +67,7 @@ function sedoo_custompost_vuejselements() {
 	register_post_type( 'vuejs', $args );
    
 }
-add_action( 'init', 'sedoo_custompost_vuejselements', 0 );
+add_action( 'init', 'sedoo_components_vuejselements', 0 );
 
 
 /**
@@ -75,10 +75,16 @@ add_action( 'init', 'sedoo_custompost_vuejselements', 0 );
  * source : https://gist.github.com/kellenmace/9e6a6fbb92ec75940f23d2a6f01c9b59#gistcomment-3270716
  * Not compatible with wp 5, See comment by innocenat
  */
-function sedoo_add_unfiltered_html_capability_to_editors( $caps, $cap, $user_id ) {
+function sedoo_components_unfiltered_html( $caps, $cap, $user_id ) {
 	if ( 'unfiltered_html' === $cap && (user_can( $user_id, 'editor' ) || user_can( $user_id, 'administrator' ) ) ) {
 	$caps = array( 'unfiltered_html' );
 	}
 	return $caps;
 }
-add_filter( 'map_meta_cap', 'sedoo_add_unfiltered_html_capability_to_editors', 1, 4 );
+add_filter( 'map_meta_cap', 'sedoo_components_unfiltered_html', 1, 4 );
+
+function sedoo_components_scripts() {
+    wp_register_style( 'sedoo_components', plugins_url('css/components.css', __FILE__) );
+    wp_enqueue_style( 'sedoo_components' );
+}
+add_action('wp_enqueue_scripts','sedoo_components_scripts');
