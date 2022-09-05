@@ -1,0 +1,69 @@
+  /*surchage du template WORDPRESS*/
+/* .default .wrapper-content .container{
+  width:100%;
+  max-width:100%;
+  padding:0px;
+} */
+.sedoo-component .v-application h1, h2, h3,h4{   
+  border-bottom:0px;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-weight:bold;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+.sedoo-component .v-application h2{
+  font-size: 16px;
+  line-height: 1.7;
+}
+.sedoo-component .v-application p{
+  margin-top:0px;
+}
+.sedoo-component input[type="text"],th, td{
+  border:none;
+}
+.sedoo-component thead, th {
+  background: none;
+}
+.sedoo-component table{
+  table-layout: auto;
+  margin: 0;
+  border-collapse: separate;
+}
+.sedoo-component ul {
+  margin-left: 5px;
+  margin-bottom:5px;
+}
+.sedoo-component .v-chip__close {
+  padding: 0;
+}
+@media (max-width: 1904px){
+  .sedoo-component div.container{
+    max-width:100%;
+  }
+}
+.sedoo-component input[type="number"]{
+  border: none;
+}
+.sedoo-component.sedoo_blocks_component thead, th{
+  background: inherit;
+}
+.sedoo-component table tr, .sedoo-component table thead{
+  background: inherit;
+}
+.sedoo-component .v-data-table > .v-data-table__wrapper > table > thead > tr > th{
+  padding: 0 16px !important;
+}
+.sedoo-component table th, table td{
+  border: none;
+}
+.sedoo-component table, thead, tbody, th, tr, td{
+  vertical-align: middle;
+}
+
+[class*="sedoo_blocks"].sedoo-component.alignfull {
+  position: relative;
+  margin-top: -40px;
+  margin-bottom: -40px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
