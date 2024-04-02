@@ -38,7 +38,7 @@ if( have_rows('elements_inclus', $IdElementVueJS) ):
         if(get_field('nom_de_la_campagne', 'option')) {
             echo str_replace('$$CAMPAIGNNAME$$', $nom_campagne, get_sub_field('script'));
         } else {
-            echo the_sub_field('script');
+            echo get_sub_field('script');
         }
     endwhile; 
 endif;
